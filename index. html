@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Redirect</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #qr-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #qr-code {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="qr-container">
+        <div id="qr-code"></div>
+        <p>You got bened</p>
+    </div>
+
+    <script>
+        var qrCode = new QRCode(document.getElementById("qr-code"), {
+            text: "https://your-desired-link.com",
+            width: 128,
+            height: 128
+        });
+    </script>
+</body>
+</html>
